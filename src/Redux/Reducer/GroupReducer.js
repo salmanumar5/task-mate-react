@@ -1,4 +1,4 @@
-import { MARK_TASK_COMPLETED, SET_CURRENT_USER, SET_GROUP_DETAILS, SET_GROUPS, SET_SELECTED_GROUP } from "../Action/actionTypes";
+import { CLEAR_STATE, MARK_TASK_COMPLETED, SET_CURRENT_USER, SET_GROUP_DETAILS, SET_GROUPS, SET_SELECTED_GROUP } from "../Action/actionTypes";
 
   
   const initialState = {
@@ -40,6 +40,8 @@ import { MARK_TASK_COMPLETED, SET_CURRENT_USER, SET_GROUP_DETAILS, SET_GROUPS, S
             ),
           },
         };
+      case CLEAR_STATE:
+          return initialState;
       default:
         return state;
     }

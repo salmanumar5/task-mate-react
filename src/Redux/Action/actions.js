@@ -7,7 +7,8 @@ import {
     SET_SELECTED_GROUP, 
     SET_GROUP_DETAILS, 
     SET_CURRENT_USER,
-    MARK_TASK_COMPLETED 
+    MARK_TASK_COMPLETED, 
+    CLEAR_STATE
   } from './actionTypes';
   
   // Action to set the list of groups the user has joined
@@ -75,3 +76,8 @@ import {
     }
   };
   
+  export const clearState = () => {
+    return {
+      type: CLEAR_STATE,
+    };
+  };
