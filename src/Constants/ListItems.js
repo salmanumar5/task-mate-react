@@ -9,9 +9,9 @@ import { RxLapTimer } from "react-icons/rx";
 
 
 export const navItems = [
-    { label: "Features", href: "#" },
-    { label: "Workflow", href: "#" },
-    { label: "Pricing", href: "#" },
+    { label: "Features", href: "#feature" },
+    { label: "Workflow", href: "#workflow" },
+    { label: "Pricing", href: "#pricing" },
     { label: "Testimonials", href: "#" },
   ];
 

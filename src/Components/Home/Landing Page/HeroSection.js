@@ -31,11 +31,11 @@ const HeroSection = () => {
           alt="error"
           className="h-auto w-full object-cover rounded-md transition-transform duration-300 hover:scale-110"
         />
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/task-mate-c37c5.appspot.com/o/landing-page%2FScreenshot%202024-08-27%20at%208.55.47%E2%80%AFPM.png?alt=media&token=e466097e-aef7-422c-9a80-ec1a04687d70"
+        {/* <img
+          src="https://firebasestorage.googleapis.com/v0/b/task-mate-c37c5.appspot.com/o/landing-page%2FScreenshot%202024-09-07%20at%201.05.30%E2%80%AFPM.png?alt=media&token=75f19fe4-3f73-4d48-b300-75d1793ef5a0"
           alt="error"
           className="h-auto w-full object-cover rounded-md transition-transform duration-300 hover:scale-110"
-        /> 
+        />  */}
         {/* <video
           autoPlay
           loop
