@@ -51,7 +51,7 @@ const GroupTasks = () => {
             console.log("Resource url::", fileUrl);
             
             // Step 2: Save the resource URL to the task
-            await HitApi({ resources: { name: file.name, url: fileUrl} }, `http://localhost:5001/api/tasks/task/${taskId}`, 'post').then((response) => {
+            await HitApi({ resources: { name: file.name, url: fileUrl} }, `https://task-mate-backend.onrender.com/api/tasks/task/${taskId}`, 'post').then((response) => {
                 // Step 3: Refresh task details
             dispatch(fetchGroupDetails(selectedGroupId));
             setFile(null); // Reset file state
@@ -78,7 +78,7 @@ const GroupTasks = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        HitApi(taskData, `http://localhost:5001/api/tasks/group/${selectedGroupId}/task`, 'post').then(() => {
+        HitApi(taskData, `https://task-mate-backend.onrender.com/api/tasks/group/${selectedGroupId}/task`, 'post').then(() => {
             dispatch(fetchGroupDetails(selectedGroupId));
             setAddTask(false);
             setTaskData({});
@@ -104,7 +104,7 @@ const GroupTasks = () => {
         try {
             console.log("taskId coming:", taskId);
 
-            const response = await HitApi({}, `http://localhost:5001/api/tasks/${taskId}/complete`, 'post');
+            const response = await HitApi({}, `https://task-mate-backend.onrender.com/api/tasks/${taskId}/complete`, 'post');
             console.log("Response from hitApi", response);
 
             dispatch(fetchGroupDetails(selectedGroupId));
@@ -115,7 +115,7 @@ const GroupTasks = () => {
 
     const handleTaskDelete = async (taskId) => {
         try {
-            await HitApi({}, `http://localhost:5001/api/tasks/task/delete/${taskId}`, 'post').then((response) => {
+            await HitApi({}, `https://task-mate-backend.onrender.com/api/tasks/task/delete/${taskId}`, 'post').then((response) => {
                 dispatch(fetchGroupDetails(selectedGroupId));
                 console.log("Response from hitApi", response);
             })

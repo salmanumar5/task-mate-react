@@ -17,7 +17,7 @@ const Dashboard = () => {
     // Fetch data for the line chart
     const fetchCompletionStats = async () => {
       try {
-        const result = await HitApi({}, 'http://localhost:5001/api/tasks/getStats/', 'POST'); // Replace with your API endpoint
+        const result = await HitApi({}, 'https://task-mate-backend.onrender.com/api/tasks/getStats/', 'POST'); // Replace with your API endpoint
         if (result && Array.isArray(result)) {
           const formattedData = result.map((stat) => ({
             day: new Date(stat.date).toLocaleDateString('en-US', { weekday: 'short' }),
@@ -35,7 +35,7 @@ const Dashboard = () => {
     // Fetch data for the pie chart
     const fetchTaskDistribution = async () => {
       try {
-        const result = await HitApi({}, 'http://localhost:5001/api/tasks/task-distribution', 'GET'); // Replace with your API endpoint
+        const result = await HitApi({}, 'https://task-mate-backend.onrender.com/api/tasks/task-distribution', 'GET'); // Replace with your API endpoint
         console.log(result);
         
         if (result) {
